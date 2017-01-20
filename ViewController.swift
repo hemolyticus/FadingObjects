@@ -13,6 +13,10 @@ class ViewController: UIViewController {
    
     @IBOutlet var slider: UISlider!
     @IBOutlet var label: UILabel!
+    @IBOutlet var label2: UILabel!
+    
+    @IBOutlet var label3: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +58,34 @@ class ViewController: UIViewController {
         label.alpha = CGFloat(slider.value)
         
     }
+    
+    
+    @IBAction func Hide(_ sender: Any) {
+        
+        self.label2.isHidden = true;
+    }
+    
+    
+    @IBAction func Reveal(_ sender: Any) {
+        
+        self.label2.isHidden = false;
+    }
+    
+    
+    @IBAction func AmIHidden(_ sender: Any) {
+        
+        
+        
+        if label2.isHidden == true {
+            label3.text = "Object is hidden"
+        }
+        else
+        {
+            label3.text = "Object is revealed"
+        }
+        
+    }
+    
     
 }
 
